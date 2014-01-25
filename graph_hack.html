@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>
+      Google Visualization API Sample
+    </title>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load('visualization', '1', {packages: ['corechart']});
+    </script>
+    <script type="text/javascript">
+      function drawVisualization() {
+        // Create and populate the data table.
+        var data = google.visualization.arrayToDataTable([
+          ['Genre', 'Number of Songs'],
+          ['Rock', 11],
+          ['Jazz', 2],
+          ['Blues', 2],
+          ['Rap', 2],
+          ['Hip-hop', 7]
+        ]);
+      var options = {title:"Genre Distribution", is3D:true, fontSize:18, pieStartAngle:45};
+        // Create and draw the visualization.
+        new google.visualization.PieChart(document.getElementById('visualization')).
+            draw(data, options);
+      }
+      
+
+      google.setOnLoadCallback(drawVisualization);
+    </script>
+<script src="http://connect.soundcloud.com/sdk.js"></script>
+<script>
+// initialize client with app credentials
+SC.initialize({
+  client_id: '1132a95612d47eff840eac78124c01f4',
+  redirect_uri: 'https://developers.soundcloud.com/callback.html'
+});
+
+// initiate auth popup
+SC.connect(function() {
+  SC.get('/me', function(me) { 
+    alert('Hello, ' + me.username); 
+  });
+});
+</script>
+  </head>
+  <body style="font-family: Arial;border: 0 none;">
+    <div id="visualization" style="width: 600px; height: 400px;"></div>
+  </body>
+</html>
+​
