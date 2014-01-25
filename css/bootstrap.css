@@ -44,6 +44,7 @@ html {
 }
 
 body {
+  padding-top: 50px;
   margin: 0;
 }
 
@@ -6586,6 +6587,12 @@ button.close {
 
 .affix {
   position: fixed;
+}
+
+/********************************************************/
+
+.navelements {
+  padding-top: 1em;
 }
 
 @-ms-viewport {
