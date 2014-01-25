@@ -6591,6 +6591,12 @@ button.close {
 
 /**********************EXTRAS!*****************************/
 
+#soundcloudbtn {
+  background: transparent;
+  border:none;
+  margin-top:10px;
+}
+
 .navelements {
   padding-top: 1em;
 }
