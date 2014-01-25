@@ -42,8 +42,13 @@
     <div class="jumbotron">
       <div class="container">
         <p class="text-center">Click the <b>X</b> if you don't like this song, Click &hearts; if you do!</p>
-        <button id="#hate" type=submit style="background: url(Dislike.png); width:200px; height:200px; float:left; border:none"> </button>
-        <button id="#like" type=submit style="background: url(Like.png); width:200px; height:200px; float:right; border:none"> </button>
+        <button id="hate" type=submit style="background: url(Dislike.png); width:200px; height:200px; float:left; border:none"> </button>
+        <button id="like" type=submit style="background: url(Like.png); width:200px; height:200px; float:right; border:none"> </button>
+
+        <div id="playpause">
+          <button id="pause" type=submit> </button>
+          <button id="play" type=submit> </button>
+        </div>
       </div>
     </div>
 
@@ -52,7 +57,8 @@
   <footer>
     <div class="navbar navbar-inverse" role="navigation">
       <div class="container">
-        <div class="navbar">
+        <div class="navbar" id="text">
+            <br>
             <p>Made with &hearts; at Hack @ Brown 2014</p>
             <p>By Eric, Faiq, Karen, Ren, Shriya, and Zach!</p>
         </div>

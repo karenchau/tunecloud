@@ -6589,11 +6589,35 @@ button.close {
   position: fixed;
 }
 
-/********************************************************/
+/**********************EXTRAS!*****************************/
 
 .navelements {
   padding-top: 1em;
 }
+
+#pause {
+  background: url('Pause.png');
+  width:75px;
+  height:75px;
+  border:none;
+}
+
+#play {
+  background: url('Play.png');
+  width:75px;
+  height:75px;
+  border:none;
+}
+
+#playpause {
+  margin:0 auto;
+}
+
+#text {
+  color:white;
+}
+
+/********************************************************/
 
 @-ms-viewport {
   width: device-width;
