@@ -1,4 +1,4 @@
-tunecloud
+#Tune Raider
 =========
 
-web app for hack at brown
+Web application using Bootstrap, SoundCloud API, and Web Audio API for Hack @ Brown
