@@ -6589,11 +6589,56 @@ button.close {
   position: fixed;
 }
 
-/********************************************************/
+/**********************EXTRAS!*****************************/
 
 .navelements {
   padding-top: 1em;
 }
+
+#pause {
+  background: transparent;
+  width:80px;
+  height:88px;
+  border:none;
+}
+
+#play {
+  background: transparent;
+  width:80px;
+  height:88px;
+  border:none;
+}
+
+#hate {
+  background: transparent;
+  width:200px; 
+  height:200px; 
+  float:left; 
+  border:none;
+}
+
+#like {
+  background: transparent;
+  width:200px; 
+  height:200px; 
+  float:right; 
+  border:none;
+}
+
+#playpause {
+  margin-top:200px;
+  text-align: center;
+}
+
+#text {
+  color:white;
+}
+
+#jumbo {
+  margin-top:-30px;
+}
+
+/********************************************************/
 
 @-ms-viewport {
   width: device-width;
