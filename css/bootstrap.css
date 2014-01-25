@@ -6596,25 +6596,46 @@ button.close {
 }
 
 #pause {
-  background: url('Pause.png');
-  width:75px;
-  height:75px;
+  background: transparent;
+  width:80px;
+  height:88px;
   border:none;
 }
 
 #play {
-  background: url('Play.png');
-  width:75px;
-  height:75px;
+  background: transparent;
+  width:80px;
+  height:88px;
+  border:none;
+}
+
+#hate {
+  background: transparent;
+  width:200px; 
+  height:200px; 
+  float:left; 
+  border:none;
+}
+
+#like {
+  background: transparent;
+  width:200px; 
+  height:200px; 
+  float:right; 
   border:none;
 }
 
 #playpause {
-  margin:0 auto;
+  margin-top:200px;
+  text-align: center;
 }
 
 #text {
   color:white;
+}
+
+#jumbo {
+  margin-top:-30px;
 }
 
 /********************************************************/
