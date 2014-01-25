@@ -33,6 +33,7 @@
 
         $('#like').on('click', function () {
             likes.add(song);
+            console.log(likes);
         });
 
 
@@ -100,6 +101,7 @@ function playTrack(genre){
         SC.oEmbed(track_url, {auto_play: true, color: "ff0066"},
             document.getElementById("target"));
         }); 
+        getGenre(); 
 
 }
 
