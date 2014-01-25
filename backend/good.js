@@ -49,10 +49,24 @@
 
 
 }
+
 var client_id = 'ba3b87fec8ae6c8a3b2192aeb474d414';
-SC.initialize({
-    client_id: 'ba3b87fec8ae6c8a3b2192aeb474d414',
-});
+     // initialize client with app credentials
+function do_login(){
+    console.log("what?")
+    SC.initialize({
+       client_id: 'ba3b87fec8ae6c8a3b2192aeb474d414',
+        redirect_uri: 'http://localhost:8000/callback.html'
+    });
+    //initiate auth popup
+    SC.connect(function() {
+        console.log("connected")
+        SC.get('/me', function(me) { 
+            alert('Hello, ' + me.username); 
+        });
+    });
+        getGenre(); 
+}
 
 
 
@@ -68,7 +82,7 @@ function getGenre(){
 }
 
 $(document).ready(function () {    
-    getGenre(); 
+    $('#soundcloudbtn').on('click', do_login) ;
 });
 
 
