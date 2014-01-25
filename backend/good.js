@@ -1,6 +1,6 @@
 (function ($) {
     //Backbone Model to each song from every genre
-    var Song = Backbone.Model.extend({
+    /*var Song = Backbone.Model.extend({
         defaults: function (){
         songname: ' ' 
         artist: ' '
@@ -23,22 +23,26 @@
     });
 
     var likes = new prefSongList(); 
-    var hates = new hateSongList(); 
+    var hates = new hateSongList(); */
+	
+	var likes = [];
+	var hates = [];
 
 
     function songFunc(songname, artist, length, artwork, genre){
-        console.log('hello world')
-        var song = new Song({songname: songname, artist: artist,
-            length: length, artwork: artwork, genre: genre}); 
+        var song = {songname:songname, artist:artist, length:length, artwork:artwork, genre:genre}; 
 
         $('#like').on('click', function () {
-            likes.add(song);
-            console.log(likes);
+            likes.push(song);
+			for(i = 0; i < likes.length; i++)
+			{
+			console.log(likes[i]);
+			}
         });
 
 
          $('#hate').on('click', function () {
-            hates.add(song); 
+            hates.push(song); 
             console.log('in next song');
             getGenre();
             console.log(hates.toJSON());
