@@ -6623,12 +6623,20 @@ button.close {
   border:none;
 }
 
+#hate:hover {
+
+}
+
 #like {
   background: transparent;
   width:200px; 
   height:200px; 
   float:right; 
   border:none;
+}
+
+#like:hover {
+  
 }
 
 #playpause {

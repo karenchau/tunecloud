@@ -52,16 +52,22 @@
 
       <div class="container">
         <p class="text-center">Click the <b>X</b> if you don't like this song, Click &hearts; if you do!</p>
-        <button id="hate" type=submit><img src="img/Dislike.png"></button>
-        <button id="like" type=submit><img src="img/Like.png"></button>
+        <button id="hate" type=submit><img src="img/Dislike.png" 
+                                      onmouseover="this.src='img/Dislikehover.png'" 
+                                      onmouseout="this.src='img/Dislike.png'"></button>
 
+        <button id="like" type=submit><img src="img/Like.png"
+                                      onmouseover="this.src='img/Likehover.png'" 
+                                      onmouseout="this.src='img/Like.png'"></button>
+        <!--
         <div id="playpause">
-          <!--
           <button id="pause" type=submit><img src="img/Pause.png"></button>
-          -->
           <button id="play" type=submit><img src="img/Play.png"></button>
         </div>  
+        -->
       </div>
+
+      <div id="target"></div>
 
     </div>
 
