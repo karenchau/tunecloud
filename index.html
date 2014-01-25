@@ -26,7 +26,7 @@
             <li><a href="favorites.html">Favorites</a></li>
           </ul>
           <div class="nav navbar-right navelements">
-            <button type="submit" id="soundcloudbtn"><img src="img/connectbutton.png"></button>
+            <button type="submit" id="soundcloudbtn" onclick="login()"><img src="img/connectbutton.png"></button>
               <script src="http://connect.soundcloud.com/sdk.js"></script>
               <script>
                   // initialize client with app credentials
@@ -36,11 +36,12 @@
                   });
 
                   // initiate auth popup
+				  login(){
                   SC.connect(function() {
                     SC.get('/me', function(me) { 
                       alert('Hello, ' + me.username); 
                     });
-                  });
+                  });}
               </script>
           </div>
         </div><!--/.navbar-collapse -->
