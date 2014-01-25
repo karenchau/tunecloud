@@ -29,13 +29,12 @@
             <button type="submit" id="soundcloudbtn" onclick="login()"><img src="img/connectbutton.png"></button>
               <script src="http://connect.soundcloud.com/sdk.js"></script>
               <script>
-			  function login(){
                   // initialize client with app credentials
+				  function login(){
                   SC.initialize({
                     client_id: '1132a95612d47eff840eac78124c01f4',
                     redirect_uri: 'http://bossprogrammer1991.github.io/callback.html'
                   });
-
                   // initiate auth popup
                   SC.connect(function() {
                     SC.get('/me', function(me) { 
