@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+      
+    <title>Tune Raider</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#"><img src="img/Logo_Vertical_Small.png"></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navelements">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="data.html">Visualization</a></li>
+            <li><a href="favorites.html">Favorites</a></li>
+          </ul>
+          <div class="nav navbar-right navelements">
+            <button type="submit" id="soundcloudbtn"><img src="img/connectbutton.png"></button>
+
+              <script src="http://connect.soundcloud.com/sdk.js"></script>            
+          </div>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+
+      <div class="container">
+        <p class="text-center">VISUALIZATION</p>
+        <button id="hate" type=submit><img src="img/Dislike.png" 
+                                      onmouseover="this.src='img/Dislikehover.png'" 
+                                      onmouseout="this.src='img/Dislike.png'"></button>
+
+        <script src = "backend/underscore.js"> </script> 
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+        </script>
+        <script src = "backend/backbone.js"> </script>
+        <script src = "backend/good.js"></script>
+
+        <button id="like" type=submit><img src="img/Like.png"
+                                      onmouseover="this.src='img/Likehover.png'" 
+                                      onmouseout="this.src='img/Like.png'"></button>
+
+        <!--
+        <div id="playpause">
+          <button id="pause" type=submit><img src="img/Pause.png"></button>
+          <button id="play" type=submit><img src="img/Play.png"></button>
+        </div>  
+        -->
+      </div>
+
+
+      <div id="target"></div>
+
+    </div>
+
+  </body>
+
+  <footer>
+    <div class="navbar navbar-inverse" role="navigation" id="jumbo">
+      <div class="container">
+        <div class="navbar" id="text">
+            <br>
+            <p>Made with &hearts; at Hack @ Brown 2014</p>
+            <p>By Eric, Faiq, Karen, Ren, Shriya, and Zach!</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</html>
+
+
