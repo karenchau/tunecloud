@@ -1,6 +1,6 @@
 (function ($) {
     //Backbone Model to each song from every genre
-    var Song = Backbone.Model.extend({
+   var Song = Backbone.Model.extend({
         defaults: function (){
         songname: ' ' 
         artist: ' '
@@ -32,13 +32,13 @@
             length: length, artwork: artwork, genre: genre}); 
 
         $('#like').on('click', function () {
-            likes.add(song);
+            //likes.add(song);
             console.log(likes);
         });
 
 
          $('#hate').on('click', function () {
-            hates.add(song); 
+            //hates.add(song); 
             console.log('in next song');
             getGenre();
             console.log(hates.toJSON());
@@ -54,14 +54,14 @@
 var client_id = 'ba3b87fec8ae6c8a3b2192aeb474d414';
      // initialize client with app credentials
 function do_login(){
-    console.log("what?")
+    //console.log("what?")
     SC.initialize({
        client_id: 'ba3b87fec8ae6c8a3b2192aeb474d414',
         redirect_uri: 'http://localhost:8000/callback.html'
     });
     //initiate auth popup
     SC.connect(function() {
-        console.log("connected")
+        //console.log("connected")
         SC.get('/me', function(me) { 
             alert('Hello, ' + me.username); 
         });
@@ -91,7 +91,7 @@ function playTrack(genre){
     console.log(genre);     
     SC.get('/tracks', { genre: genre, bpm: { from: 120 } }, function(tracks) {
         var random = Math.floor(Math.random() * 49);
-        console.log(tracks); 
+        //console.log(tracks); 
         var length = tracks[random].duration; 
         var artist = tracks[random].user.username; 
         var songname = tracks[random].title; 
